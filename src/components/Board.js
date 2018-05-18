@@ -134,7 +134,7 @@ export default class extends Component {
 		if (pendingHoleIndex === null) {
 			hole.status === 'filled'
 				? this.setState({ pendingHole: holeIndex })
-				: console.log('There is no peg here');
+				: window.alert('There is no peg here');
 			return;
 		}
 
@@ -143,7 +143,7 @@ export default class extends Component {
 		// Destination hole is not empty
 		if (destHole.status === 'filled') {
 			this.setState({ pendingHole: null });
-			console.log('There is already a peg here, please try again.');
+			window.alert('There is already a peg here, please try again.');
 			return;
 		}
 
@@ -156,7 +156,7 @@ export default class extends Component {
 			// Destination is not valid for pending hole
 			// or destination hole is not empty
 			this.setState({ pendingHole: null });
-			console.log('Not a valid move, please try again.');
+			window.alert('Not a valid move, please try again.');
 		} else {
 			// Remove peg from pending hole
 			// Remove peg from jumped hole

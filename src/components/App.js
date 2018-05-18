@@ -12,7 +12,6 @@ class App extends Component {
 	state = { gameStatus: 'Not Started' };
 	startGame = () => {
 		this.setState({ gameStatus: 'In Progress' });
-		console.log('startGame');
 	};
 	endGame = () => {
 		this.setState({ gameStatus: 'Game Ended' });
