@@ -148,11 +148,10 @@ export default class extends Component {
 		}
 
 		const pendingHole = this.state.holes[pendingHoleIndex];
+		const jumpHoleIndex = pendingHole.moveChecks[holeIndex];
+		const jumpHole = this.state.holes[jumpHoleIndex];
 
-		if (
-			!pendingHole.moveChecks[holeIndex] ||
-			this.state.holes[pendingHole.moveChecks[holeIndex]] === 'empty'
-		) {
+		if (!pendingHole.moveChecks[holeIndex] || jumpHole.status === 'empty') {
 			// Destination is not valid for pending hole
 			// or destination hole is not empty
 			this.setState({ pendingHole: null });
@@ -163,7 +162,7 @@ export default class extends Component {
 			// Fill destination hole
 			const newHolesState = this.state.holes;
 			this.removePeg(pendingHoleIndex);
-			this.removePeg(pendingHole.moveChecks[holeIndex]);
+			this.removePeg(jumpHoleIndex);
 			this.addPeg(holeIndex);
 			this.setState({ pendingHole: null });
 
