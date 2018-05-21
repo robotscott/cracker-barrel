@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/App.css';
 import Board from '../components/Board';
+import github from '../images/GitHub.png';
 
 class App extends Component {
 	constructor(props) {
@@ -21,6 +22,7 @@ class App extends Component {
 	};
 
 	render() {
+		console.log(github);
 		return (
 			<div className="App">
 				<h1>Peg Game</h1>
@@ -38,6 +40,14 @@ class App extends Component {
 						<button onClick={this.restart}>Restart</button>
 					</div>
 				)}
+				<div className="github">
+					<a
+						href="https://github.com/robotscott/cracker-barrel"
+						target="_blank"
+					>
+						<img src={github} alt="GitHub" />
+					</a>
+				</div>
 			</div>
 		);
 	}
