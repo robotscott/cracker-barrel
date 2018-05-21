@@ -40,6 +40,11 @@ class App extends Component {
 						<button onClick={this.restart}>Restart</button>
 					</div>
 				)}
+				<ol className="rules">
+					<li>Start game and click first peg to remove it from the board.</li>
+					<li>Click one peg to jump over another, into an empty space, and removing the peg that was jumped over. Keep jumping until only one peg is left.</li>
+					<li>You may only jump in a straight line.</li>
+				</ol>
 				<div className="github">
 					<a
 						href="https://github.com/robotscott/cracker-barrel"
