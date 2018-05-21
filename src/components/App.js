@@ -44,6 +44,7 @@ class App extends Component {
 					<a
 						href="https://github.com/robotscott/cracker-barrel"
 						target="_blank"
+						rel="noopener noreferrer"
 					>
 						<img src={github} alt="GitHub" />
 					</a>
