@@ -62,7 +62,6 @@ export default class extends Component {
 			// Remove peg from pending hole
 			// Remove peg from jumped hole
 			// Fill destination hole
-			const newHolesState = this.props.holes;
 			this.props.removePeg(pendingHoleIndex);
 			this.props.removePeg(jumpHoleIndex);
 			this.props.addPeg(holeIndex);
