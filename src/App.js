@@ -1,12 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import configureStore from './store/configureStore';
+import './css/App.css';
+import Header from './containers/Header';
 import Board from './containers/Board';
 import Buttons from './containers/Buttons';
-import Header from './containers/Header';
+import Rules from './components/Rules';
 import Footer from './components/Footer';
-import configureStore from './store/configureStore';
-
-import './css/App.css';
 
 const store = configureStore();
 
@@ -16,6 +16,7 @@ const App = () => (
 			<Header />
 			<Board />
 			<Buttons />
+			<Rules />
 			<Footer />
 		</div>
 	</Provider>

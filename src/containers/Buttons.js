@@ -3,6 +3,8 @@ import { endGame, startGame } from '../actions/game';
 import { resetBoard } from '../actions/board';
 import Buttons from '../components/Buttons';
 
+import '../css/Buttons.css';
+
 const mapStateToProps = state => {
 	return {
 		gameStatus: state.game.gameStatus
