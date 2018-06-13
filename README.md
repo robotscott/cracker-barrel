@@ -4,4 +4,4 @@
 
 Built using React
 
-[link Demo](https://cracker-barrel.herokuapp.com/)
+[Demo](https://cracker-barrel.herokuapp.com/)
